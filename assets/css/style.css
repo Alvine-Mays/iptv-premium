@@ -1,0 +1,392 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "police", sans-serif;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f2ef;
+  color: #333;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "police";
+  src: url(../font-awesome-4.7.0/fonts/CircularStd-Medium.woff) format('woff');
+  font-style: normal;
+  font-size: xx-large;
+}
+
+@font-face {
+  font-family: "header";
+  src: url(../font-awesome-4.7.0/fonts/fontawesome-webfont.woff);
+  font-style: oblique;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between; /* Place le titre et le logo aux extrémités */
+  align-items: center; /* Aligne verticalement les éléments au centre */
+  padding: 10px; /* Ajoute de l'espace à l'intérieur du header */
+  background: linear-gradient(120deg, #4e3d2c, #8b7762);
+}
+
+.app-title {
+  margin: 0 0 0 15px; /* Supprime les marges par défaut */
+  color: #ffffff; /* Couleur du texte pour une bonne lisibilité */
+  font-size: 28px; /* Ajuste la taille du texte */ 
+}
+
+.header svg {
+  max-width: 90px; /* Ajuste la taille du logo */
+  height: auto; /* Garde les proportions */
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(120deg, #4e3d2c, #8b7762);
+  color: #fff;
+}
+.hero-text {
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.hero-text h2 {
+  margin-bottom: 8px;
+  margin-top: 10px;
+  font-size: 2em;
+}
+.hero-btn { 
+  border: none;
+  cursor: pointer; 
+  display: inline-flex; 
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: #4e3d2c;
+  background: #fff;
+  text-decoration: none;
+  border-radius: 5px; 
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #b8a18a;
+}
+.hero-img img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px; 
+}
+
+/* PRESENTATIONS */
+.about-iptv {
+  padding: 50px 20px;
+  background: #f8f8f8;
+}
+
+.about-iptv .container {
+  max-width: 800px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.about-iptv h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-iptv p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.about-iptv .btn {
+  display: inline-flex; 
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #4e3d2c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.about-iptv .btn:hover {
+  background: #8b7762;
+}
+
+/* PLANS SECTION */
+.plans {
+  padding: 20px; 
+  text-align: center;
+  max-width: 800px; 
+  margin: 0 auto;
+}
+.plans h2 {
+  margin: 20px 0;
+  font-size: 2em;
+}
+.plan-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.plan-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+.plan-card h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+.plan-card P { 
+  font-size: 1.1em;
+}
+.plan-card:hover {
+  transform: scale(1.02); 
+}
+.plan-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.price {
+  color: #4e3d2c;
+  font-weight: 900;
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+.plan-card .btn { 
+  border: none;
+  cursor: pointer; 
+  display: inline-flex; 
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #4e3d2c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.plan-card .btn:hover {
+  background: #8b7762;
+}
+/* FAVORITES SECTION */
+.favorites {
+  padding: 20px; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+.favorites h2 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+.fav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.fav-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fav-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+.fav-info {
+  margin-left: 10px;
+  padding: 10px;
+}
+.fav-info h3 {
+  margin-bottom: 7px;
+}
+.fav-btn {
+  margin-left: auto;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ff5f5f;
+  cursor: pointer;
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 20px;  
+  max-width: 800px; 
+  margin: 0 auto;
+}
+.contact h2 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+.contact p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+/* #contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  gap: 10px;
+} */
+
+#contactForm {
+  display:inline-flex;
+  flex-direction: column;
+  min-width: 100%; 
+  margin: 0 auto;
+  gap: 10px; 
+}
+#contactForm input,
+#contactForm textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px double #ccc;
+  width: 100%;
+}
+#contactForm button {
+  border: none;
+  cursor: pointer;  
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #4e3d2c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#contactForm button:hover {
+  background: #8b7762;
+}
+
+/* MODAL COMMANDE */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-content p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-whatsapp,
+.btn-message {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+
+.btn-whatsapp {
+  background-color: rgb(34, 163, 34);
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.btn-message {
+  background-color: rgb(19, 19, 172);
+}
+#orderModal {
+  display: none; /* Caché au chargement */
+}
+
+/* NAVIGATION BASSE MOBILE */
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: #4e3d2c;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  color: white;
+  margin: 0;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-item i {
+  font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+  min-height: 50px;
+  background: #4e3d2c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0; 
+  font-size: 1.1em;
+}
+footer #CyberFusion { 
+  color: rgb(0, 0, 0);
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPTV Premium | CyberFusion</title>
+    <link rel="stylesheet" href="assets/css/style.css" /> 
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.css">
+
+    <link rel="preload" href="./assets/font-awesome-4.7.0/fonts/CircularStd-Medium.woff" as="font" type="font/woff" crossorigin="anonymous" >
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="app-title">IPTV Premium</h1>
+        <svg width="200" height="200" viewBox="0 0  200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Définition du dégradé -->
+            <defs>
+                <linearGradient id="degrade1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#4e3d2c;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#8b7762;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Écran stylisé -->
+            <rect x="30" y="50" width="140" height="100" rx="15" ry="15" fill="url(#degrade1)" stroke="#4e3d2c"
+                stroke-width="4" />
+
+            <!-- Onde de signal -->
+            <path d="M40 100 Q60 70 80 100 T120 100 T160 100" stroke="#ffffff" stroke-width="5" fill="none" />
+
+            <!-- Pied de l'écran -->
+            <rect x="90" y="150" width="20" height="20" fill="#4e3d2c" />
+
+            <!-- Ombre portée -->
+            <ellipse cx="100" cy="170" rx="60" ry="10" fill="#000000" opacity="0.3" />
+        </svg>
+
+    </header>
+
+    <!-- SECTION ACCUEIL / HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Découvrez un monde de divertissement</h2>
+            <p>Sports, séries, films et plus encore, en HD et 4K</p>
+            <button class="hero-btn" onclick="scrollToSection('plans')">
+                Découvrir les Plans
+            </button>
+        </div>
+        <div class="hero-img">
+            <!-- Image de fond ou illustration -->
+            <img src="./assets/img/illustration.jpeg" alt="Hero Streaming" />
+        </div>
+    </section>
+
+    <!-- SECTION PRÉSENTATION IPTV -->
+    <section class="about-iptv" id="about">
+        <div class="container">
+            <h2>Qu'est-ce que <br> l'IPTV ? 📺</h2>
+            <p>
+                L'<strong>IPTV</strong> <em>(Internet Protocol Television)</em> révolutionne la manière dont nous regardons la télévision ! 🎥
+                Oubliez les câbles et paraboles, ici tout passe par Internet. 📡
+                Regardez vos chaînes préférées en HD, accédez à des milliers de films et séries à la demande (VOD),
+                où que vous soyez et sur<em> tous vos appareils <strong>(TV, smartphone, PC, tablette)</strong></em>.
+            </p>
+            <p>
+                Avec nos <strong>abonnements IPTV</strong>, profitez d’un accès illimité aux meilleures chaînes du monde,
+                un zapping ultra-rapide et une qualité d’image exceptionnelle. 🔥
+                Ne ratez plus jamais vos émissions et matchs préférés !
+            </p> 
+            <a href="#plans" class="btn">Voir nos offres 📡</a>
+        </div>
+    </section>
+
+    <!-- SECTION OFFRES / PLANS -->
+    <section class="plans" id="plans">
+        <h2>Nos Plans</h2>
+        <div class="plan-cards">
+            <div class="plan-card">
+                <img src="./assets/img/plan3mois.jpeg" alt="3 mois" />
+                <h3>Plan 3 mois</h3>
+                <p>Découvrez l’IPTV avec +10 000 chaînes et VOD !</p>
+                <p class="price">5 000 FCFA</p>
+                <button class="btn" onclick="openOrderModal('Plan 1 mois', '5 000 FCFA')">Commander</button>
+            </div>
+
+            <div class="plan-card">
+                <img src="./assets/img/plan5mois.jpeg" alt="5 mois" />
+                <h3>Plan 5 mois</h3>
+                <p>Un accès complet avec support VIP pour une expérience optimale !</p>
+                <p class="price">10 000 FCFA</p>
+                <button class="btn" onclick="openOrderModal('Plan 3 mois', '10 000 FCFA')">Commander</button>
+            </div>
+
+            <div class="plan-card">
+                <img src="./assets/img/plan12mois.jpeg" alt="12 mois" />
+                <h3>Plan 12 mois</h3>
+                <p>Profitez d’un accès illimité avec mises à jour incluses !</p>
+                <p class="price">25 000 FCFA</p>
+                <button class="btn" onclick="openOrderModal('Plan 12 mois', '25 000 FCFA')">Commander</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de commande -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2>Commander un plan</h2>
+            <p id="selectedPlan">Vous avez choisi : <br> <span id="planName"></span> - <span id="planPrice"></span></p>
+            <div class="modal-buttons">
+                <button class="btn-whatsapp" onclick="sendToWhatsApp()">WhatsApp</button>
+                <button class="btn-message" onclick="sendToMessage()">Mail</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SECTION FAVORIS / CHAÎNES (EXEMPLE) -->
+    <section class="favorites" id="favorites">
+        <h2>Chaînes Populaires</h2>
+        <div class="fav-list">
+            <div class="fav-item">
+                <img src="./assets/img/sport.webp" />
+                <div class="fav-info">
+                    <h3>Sport Channel</h3>
+                    <p>Live Football, Basketball, etc.</p>
+                </div>
+                <button class="fav-btn">♥</button>
+            </div>
+            <div class="fav-item">
+                <img src="./assets/img/movie.jpeg" alt="Movie Channel" />
+                <div class="fav-info">
+                    <h3>Movie Channel</h3>
+                    <p>Films en continu</p>
+                </div>
+                <button class="fav-btn">♥</button>
+            </div>
+        </div>
+    </section> 
+
+    <!-- SECTION CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact & Support</h2>
+        <p>Pour toute question, n’hésitez pas à nous écrire.</p>
+        <form id="contactForm">
+            <input type="text" id="userName" placeholder="Votre nom" name="userName" required /> 
+            <textarea id="userMessage" placeholder="Votre message" name="userMessage"></textarea>
+            <button type="submit" class="btn">Envoyer sur WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- NAVIGATION BASSE (style “mobile app”) -->
+    <div class="bottom-nav">
+        <div class="nav-item" onclick="scrollToSection('plans')">
+            <i class="fas fa-list"> Plans</i>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('favorites')">
+            <i class="fas fa-heart"> Favoris</i>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('contact')">
+            <i class="fas fa-envelope"> Contact</i>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> IPTV Premium | <span id="CyberFusion">By CyberFusion</span></p>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
