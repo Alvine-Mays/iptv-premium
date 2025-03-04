@@ -136,9 +136,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selectedPlan = planNameElement.textContent.trim();
     let planPrice = planPriceElement.textContent.trim();
-    let phoneNumber = "242068457521"; // Remplace avec ton numéro WhatsApp
+    let phoneNumber = "242067177729"; // Remplace avec ton numéro WhatsApp
     let message = encodeURIComponent(
-      `Salut ! Je souhaite commander le plan : ${selectedPlan} (${planPrice}). Pouvez-vous me donner plus d'infos ?`
+      `Bonjour Mr,\n\nJe souhaite commander le plan : *${selectedPlan} (${planPrice}).*\nMerci de me donner plus d'informations.\n\nCordialement.`
     );
 
     let url = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let email = "contact@tonsite.com"; // Remplace par ton email
     let subject = encodeURIComponent("Commande de plan");
     let body = encodeURIComponent(
-      `Bonjour,\n\nJe souhaite commander le plan : ${selectedPlan} (${planPrice}).\nMerci de me donner plus d'informations.\n\nCordialement.`
+      `Bonjour Mr,\n\nJe souhaite commander le plan : ${selectedPlan} (${planPrice}).\nMerci de me donner plus d'informations.\n\nCordialement.`
     );
 
     let mailUrl = `mailto:${email}?subject=${subject}&body=${body}`;
@@ -184,7 +184,7 @@ document
       return;
     }
 
-    let phoneNumber = "242068457521"; // Ton numéro WhatsApp
+    let phoneNumber = "242067177729"; // Ton numéro WhatsApp
     let message = encodeURIComponent(
       `Nom : ${userName}\nMessage :\n${userMessage}`
     );
