@@ -497,7 +497,7 @@ body {
  
 .movie-close {
   position: absolute;
-  top: 50px;
+  top: 0px;
   right: 20px;
   font-size: 30px;
   cursor: pointer;
@@ -522,12 +522,14 @@ body {
 }
 .nav-item {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; 
 }
 .nav-item i {
-  font-size: 20px;
+  font-size: 15px;
+  margin: 0 10px;
+  /* text-align: end; */
 }
 
 /* FOOTER */
