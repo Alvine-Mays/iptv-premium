@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+
+Sitemap: https://iptv-premium.onrender.com/sitemap.xml
+Sitemap: https://iptv-premium.onrender.com/sitemap-images.xml
+
+# Paramètres recommandés pour les crawlers
+Crawl-delay: 5
+User-agent: Mediapartners-Google
+Allow: /
+
+# Blocage des robots indésirables
+User-agent: MJ12bot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
