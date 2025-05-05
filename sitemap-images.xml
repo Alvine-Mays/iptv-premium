@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        
+    <url>
+        <loc>https://iptv-premium.onrender.com/</loc>
+        <image:image>
+            <image:loc>https://iptv-premium.onrender.com/assets/img/illustration.jpeg</image:loc>
+            <image:title>IPTV Premium - Service de streaming</image:title>
+            <image:caption>Abonnement IPTV avec +15 000 chaînes</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iptv-premium.onrender.com/assets/img/favoris/bein-sport.jpg</image:loc>
+            <image:title>Chaîne BeIN Sports</image:title>
+        </image:image>
+        <!-- Ajoutez toutes vos images importantes ici -->
+    </url>
+</urlset>
