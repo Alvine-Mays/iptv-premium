@@ -331,3 +331,10 @@ window.selectSpecialOffer = function(planName, planPrice) {
   closeModal('specialOfferModal');
   openModal('orderModal');
 };
+
+// Selection d'une offre
+window.selectOffer = function(planName, planPrice) {
+  document.getElementById('planName').textContent = planName;
+  document.getElementById('planPrice').textContent = planPrice; 
+  openModal('orderModal');
+};
