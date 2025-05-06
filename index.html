@@ -221,7 +221,7 @@
                         <li><i class="fas fa-check"></i> Support standard</li>
                         <li><i class="fas fa-check"></i> 1 connexion</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="openOrderModal('3 Mois', '5 000 FCFA')">S'abonner</button>
+                    <button class="btn btn-primary" onclick="selectOffer('3 Mois', '5 000 FCFA')">S'abonner</button>
                 </div>
 
                 <div class="plan-card popular">
@@ -241,7 +241,7 @@
                         <li><i class="fas fa-check"></i> 1 connexion</li>
                         <li><i class="fas fa-check"></i> Applications dédiées</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="openOrderModal('6 Mois', '10 000 FCFA')">S'abonner</button>
+                    <button class="btn btn-primary" onclick="selectOffer('6 Mois', '10 000 FCFA')">S'abonner</button>
                 </div>
 
                 <div class="plan-card">
@@ -262,7 +262,7 @@
                         <li><i class="fas fa-check"></i> Mises à jour incluses</li>
                     </ul>
                     <button class="btn btn-primary"
-                        onclick="openOrderModal('12 Mois', '25 000 FCFA')">S'abonner</button>
+                        onclick="selectOffer('12 Mois', '25 000 FCFA')">S'abonner</button>
                 </div>
             </div>
 
@@ -626,6 +626,12 @@
             document.getElementById('planName').textContent = planName;
             document.getElementById('planPrice').textContent = planPrice;
             closeModal('specialOfferModal');
+            openModal('orderModal');
+        }
+
+        function selectOffer(planName, planPrice) {
+            document.getElementById('planName').textContent = planName;
+            document.getElementById('planPrice').textContent = planPrice; 
             openModal('orderModal');
         }
 
